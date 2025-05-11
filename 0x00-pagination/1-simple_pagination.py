@@ -43,4 +43,7 @@ class Server:
         dataset = self.dataset()
         if start >= len(dataset):
             return []
-        return dataset[start:end]
+        items = []
+        for i in range(start, end):
+            items.append(dataset[i])
+        return items
