@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 import math
 from typing import List
@@ -43,7 +44,4 @@ class Server:
         dataset = self.dataset()
         if start >= len(dataset):
             return []
-        items = []
-        for i in range(start, end):
-            items.append(dataset[i])
-        return items
+        return dataset[start:end]
